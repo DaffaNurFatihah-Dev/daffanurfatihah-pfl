@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffa Nur Fatihah — Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgPrimary: '#FAFAFC',
+            cardBg: '#FFFFFF',
+            textDark: '#0F172A',
+            textMuted: '#64748B',
+            accentBg: '#F1F5F9'
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bgPrimary text-textDark font-sans antialiased leading-relaxed overflow-x-hidden min-h-screen selection:bg-slate-800 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-bgPrimary/80 backdrop-blur-xl border-b border-slate-200/60">
+    <div class="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-5 flex justify-between items-center">
+      <a href="#" class="font-display text-2xl font-bold tracking-tight text-textDark hover:opacity-80 transition">DNF<span class="text-slate-400">.</span></a>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-10 text-sm font-medium text-textMuted">
+        <a href="#about" class="hover:text-textDark transition">About</a>
+        <a href="#projects" class="hover:text-textDark transition">Projects</a>
+        <a href="#experience" class="hover:text-textDark transition">Experience</a>
+        <a href="#skills" class="hover:text-textDark transition">Skills</a>
+        <a href="#education" class="hover:text-textDark transition">Education</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://drive.google.com/file/d/1Y1yG5-LTlPPIB-s7il3YhQI5dEcDmtUy/view?usp=sharing" target="_blank" download class="bg-textDark text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide uppercase hover:bg-slate-800 transition shadow-sm flex items-center gap-2">
+          <i class="fa-solid fa-download text-[11px]"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-textDark text-2xl focus:outline-none p-1">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-200 px-6 py-6 space-y-4 text-sm font-medium text-textMuted shadow-lg">
+      <a href="#about" class="block hover:text-textDark">About</a>
+      <a href="#projects" class="block hover:text-textDark">Projects</a>
+      <a href="#experience" class="block hover:text-textDark">Experience</a>
+      <a href="#skills" class="block hover:text-textDark">Skills</a>
+      <a href="#education" class="block hover:text-textDark">Education</a>
+      <a href="templat cv daffa nur fatihah.pdf" target="_blank" download class="inline-block w-full text-center bg-textDark text-white py-3 rounded-xl font-medium">Download CV</a>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+
+    <!-- HERO SECTION -->
+    <section id="about" class="py-16 sm:py-24 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Text Info -->
+      <div class="lg:col-span-7 order-2 lg:order-1" data-aos="fade-up" data-aos-duration="800">
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          IoT & Embedded Systems Engineer
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-textDark mb-6 leading-[1.08]">
+          Bridging Hardware, Firmware & Cloud.
+        </h1>
+
+        <p class="text-textMuted text-base sm:text-lg mb-8 font-normal leading-relaxed max-w-2xl">
+          Hi! I’m <strong class="text-textDark font-semibold">Daffa Nur Fatihah</strong>, an Electrical Engineering Technology student at UGM with a huge passion for building connected hardware solutions. I specialize in designing custom PCBs, crafting microcontroller firmware in C/C++, and building seamless web dashboards to monitor real-time telemetry data.
+        </p>
+        
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <a href="mailto:daffanurfatihah@gmail.com" class="bg-textDark text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition shadow-lg shadow-slate-900/10 flex items-center gap-2.5">
+            <i class="fa-solid fa-envelope text-xs"></i>
+            <span>Drop an Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/daffanurfatihah" target="_blank" class="bg-cardBg text-textDark px-7 py-3.5 rounded-full text-sm font-semibold border border-slate-200 hover:bg-slate-50 transition flex items-center gap-2.5 shadow-sm">
+            <i class="fa-brands fa-linkedin text-base text-blue-600"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-6 text-slate-400 text-xl pt-6 border-t border-slate-200/80">
+          <a href="https://www.linkedin.com/in/daffanurfatihah" target="_blank" class="hover:text-textDark transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/dffanrf" target="_blank" class="hover:text-textDark transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:daffanurfatihah@gmail.com" class="hover:text-textDark transition" title="Email Direct"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- PHOTO FRAME -->
+      <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="relative w-full max-w-[280px] sm:max-w-[320px] group">
+          <!-- Subtle Glow Behind -->
+          <div class="absolute -inset-2 bg-gradient-to-tr from-slate-200 to-slate-400 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition duration-700"></div>
+          
+          <!-- Compact Photo Box -->
+          <div class="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-xl border border-slate-200/80">
+            <img src="file_0000000044fc820a8d1064405e4fbd26.png" alt="Daffa Nur Fatihah" class="w-full h-full object-cover filter grayscale contrast-105 group-hover:scale-105 transition duration-700 ease-out">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="py-20 border-t border-slate-200/80">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14" data-aos="fade-up">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-textMuted block mb-2">Selected Works</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-textDark">Featured Projects</h2>
+        </div>
+        <p class="text-textMuted text-sm max-w-md mt-3 md:mt-0 leading-relaxed">
+          Eksplorasi proyek perancangan sirkuit hardware, firmware sistem tertanam, dan platform IoT real-time.
+        </p>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- Project 1 -->
+        <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="fade-up">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3.5 py-1.5 rounded-full">IoT Telemetry</span>
+              <i class="fa-solid fa-microchip text-slate-400 text-lg"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-textDark mb-3">Industrial Machine Runtime & Fleet GPS Tracking</h3>
+            <p class="text-textMuted text-sm leading-relaxed mb-8">
+              Mendesain PCB kustom pakai EAGLE serta mengembangkan firmware ESP32 berbasis C/C++ untuk merekam jam kerja mesin pemotong poros dan memantau posisi GPS armada truk secara real-time via jaringan seluler.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">ESP32</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">EAGLE PCB</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">GPS Telemetry</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">C/C++</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3.5 py-1.5 rounded-full">Embedded System</span>
+              <i class="fa-solid fa-wifi text-slate-400 text-lg"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-textDark mb-3">IoT Embedded Systems & OTA Updates</h3>
+            <p class="text-textMuted text-sm leading-relaxed mb-8">
+              Sistem akuisisi data sensor end-to-end yang dilengkapi fitur Over-The-Air (OTA) untuk pembaruan firmware mikrokontroler jarak jauh tanpa kabel fisik, terintegrasi penuh ke REST API & PostgreSQL.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">OTA Updates</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">CodeIgniter 3</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">PostgreSQL</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">UART / I2C</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="fade-up">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3.5 py-1.5 rounded-full">Hardware Prototype</span>
+              <i class="fa-solid fa-gears text-slate-400 text-lg"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-textDark mb-3">Production Logger & Smart Door Access</h3>
+            <p class="text-textMuted text-sm leading-relaxed mb-8">
+              Perangkat keras pencatat jumlah output produksi harian dan runtime mesin industri berbasis ESP32, keypad, dan layar LCD, serta prototipe sistem akses pintu pintar berbasis sensor.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">ESP32</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">PCB Assembly</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">Soldering</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3.5 py-1.5 rounded-full">Web & API Services</span>
+              <i class="fa-solid fa-code text-slate-400 text-lg"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-textDark mb-3">IoT Web Monitoring & REST API Server</h3>
+            <p class="text-textMuted text-sm leading-relaxed mb-8">
+              Pengembangan platform web fullstack untuk pemantauan kondisi perangkat IoT secara visual, penyediaan REST API untuk jalur komunikasi server-hardware, dan pengujian API via Postman.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">REST API</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">PHP / Laravel</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">React Vite</span>
+            <span class="text-xs font-medium text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">Postman</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 border-t border-slate-200/80">
+      <div class="mb-14" data-aos="fade-up">
+        <span class="text-xs font-semibold uppercase tracking-widest text-textMuted block mb-2">Track Record</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-textDark">Work Experience</h2>
+      </div>
+
+      <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-8 sm:p-12 shadow-sm" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-100 pb-8 mb-8 gap-3">
+          <div>
+            <h3 class="font-display text-2xl font-bold text-textDark">IoT Developer Intern</h3>
+            <p class="text-sm font-semibold text-slate-500 mt-1">Quick Traktor — Yogyakarta, Indonesia</p>
+          </div>
+          <span class="bg-textDark text-white text-xs font-semibold px-4 py-2 rounded-full w-fit tracking-wide">Mei 2025 – Mei 2026</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-sm text-textMuted">
+          <ul class="space-y-4 list-disc pl-5 leading-relaxed">
+            <li><strong>Hardware Design & Assembly:</strong> Merancang tata letak PCB kustom, pemilihan komponen elektronik, soldering sirkuit, dan perakitan panel sistem IoT.</li>
+            <li><strong>Firmware Development:</strong> Membuat firmware mikrokontroler menggunakan C/C++ pada Arduino IDE untuk membaca data berbagai sensor.</li>
+            <li><strong>Data Communication:</strong> Mengintegrasikan protokol UART serta merancang REST API sebagai penghubung data ke database server.</li>
+          </ul>
+          <ul class="space-y-4 list-disc pl-5 leading-relaxed">
+            <li><strong>Over-The-Air (OTA):</strong> Mengimplementasikan mekanisme pembaruan firmware jarak jauh tanpa kabel untuk kemudahan maintenance.</li>
+            <li><strong>System Testing:</strong> Melakukan testing API menggunakan Postman dan pengujian integrasi hardware-software secara menyeluruh.</li>
+            <li><strong>Version Control:</strong> Menggunakan GitLab untuk manajemen kode, pembuatan dokumentasi teknis, dan koordinasi proyek.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 border-t border-slate-200/80">
+      <div class="bg-slate-100/70 rounded-3xl p-8 sm:p-12 border border-slate-200/80" data-aos="fade-up">
+        <h2 class="font-display text-3xl font-bold text-textDark mb-10">Technical Skillset</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Hardware & Circuitry</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">PCB Layout (EAGLE)</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">Circuit Assembly</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">Soldering</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">Relay Integration</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Embedded & Firmware</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">C / C++</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">ESP32 & Arduino</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">OTA Deployment</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">UART / I2C</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Software, DB & Tools</h4>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">PHP (CI3, Laravel)</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">JS (React Vite)</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">PostgreSQL & MySQL</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">GitLab / GitHub</span>
+              <span class="bg-cardBg border border-slate-200 text-xs text-textDark font-semibold px-3.5 py-2 rounded-xl">Postman & VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & LEADERSHIP -->
+    <section id="education" class="py-20 border-t border-slate-200/80 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      
+      <!-- Education -->
+      <div data-aos="fade-up">
+        <span class="text-xs font-semibold uppercase tracking-widest text-textMuted block mb-2">Background</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-textDark mb-8">Education</h2>
+
+        <div class="space-y-6">
+          <div class="bg-cardBg p-8 rounded-3xl border border-slate-200/80">
+            <span class="text-xs font-mono font-semibold text-slate-400">2025 – Present</span>
+            <h3 class="font-display text-xl font-bold text-textDark mt-1">Universitas Gadjah Mada (UGM)</h3>
+            <p class="text-xs text-slate-500 font-semibold mt-0.5">Bachelor of Applied Science in Electrical Engineering Technology</p>
+            <p class="text-xs text-textMuted mt-3 leading-relaxed">Fokus studi pada sistem tertanam, desain sirkuit elektronik, sistem kontrol, dan integrasi perangkat keras.</p>
+          </div>
+
+          <div class="bg-cardBg p-8 rounded-3xl border border-slate-200/80">
+            <span class="text-xs font-mono font-semibold text-slate-400">2022 – 2026</span>
+            <h3 class="font-display text-xl font-bold text-textDark mt-1">SMK Negeri 2 Klaten</h3>
+            <p class="text-xs text-slate-500 font-semibold mt-0.5">Sistem Informasi Jaringan dan Aplikasi (SIJA)</p>
+            <p class="text-xs text-textMuted mt-3 leading-relaxed">Fokus pada jaringan komputer, arsitektur sistem, manajemen database, dan pengembangan perangkat lunak.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <span class="text-xs font-semibold uppercase tracking-widest text-textMuted block mb-2">Activities</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-textDark mb-8">Leadership & Honors</h2>
+
+        <div class="space-y-6">
+          <div class="bg-cardBg p-8 rounded-3xl border border-slate-200/80">
+            <h3 class="font-display text-xl font-bold text-textDark">PASKIBRAKA Kabupaten Klaten 2023</h3>
+            <p class="text-xs text-slate-500 font-semibold mt-0.5 mb-3">BRADASIWA — Squad Coordinator & Coach</p>
+            <p class="text-xs text-textMuted leading-relaxed">
+              Lolos seleksi ketat sebagai pengibar bendera resmi HUT RI Kabupaten Klaten 2023. Memimpin divisi latihan dan berhasil membawa tim menduduki <strong>Juara 2 LKBB Nogosari 2024 se-Jawa Tengah</strong>.
+            </p>
+          </div>
+
+          <div class="bg-cardBg p-8 rounded-3xl border border-slate-200/80">
+            <h3 class="font-display text-xl font-bold text-textDark">Panitia Event RAJA Group / Paskibra</h3>
+            <p class="text-xs text-slate-500 font-semibold mt-0.5 mb-3">Koordinator Teknis & Tim Rekapitulasi</p>
+            <p class="text-xs text-textMuted leading-relaxed">
+              Bertanggung jawab atas administrasi resmi, verifikasi serta rekapitulasi nilai perlombaan secara real-time dengan tingkat presisi tinggi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer class="py-20 border-t border-slate-200/80 text-center" data-aos="fade-up">
+      <div class="bg-cardBg border border-slate-200/80 rounded-3xl p-10 sm:p-16 max-w-4xl mx-auto mb-12 shadow-sm">
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-textDark mb-4">Let's build something together.</h2>
+        <p class="text-textMuted text-sm mb-10 max-w-lg mx-auto leading-relaxed">
+          Punya proyek menarik atau berminat kolaborasi di bidang IoT & embedded systems? Jangan ragu buat sapa saya via email!
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a href="mailto:daffanurfatihah@gmail.com" class="bg-textDark text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-800 transition shadow-lg shadow-slate-900/10 flex items-center gap-3">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+            <span>daffanurfatihah@gmail.com</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/daffanurfatihah" target="_blank" class="bg-slate-100 text-textDark px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-200 transition flex items-center gap-2.5">
+            <i class="fa-brands fa-linkedin text-base text-blue-600"></i>
+            <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 space-y-2">
+        <p>Klaten, Jawa Tengah, Indonesia</p>
+        <p>&copy; 2026 Daffa Nur Fatihah. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- JS SCRIPTS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({ duration: 800, once: true });
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
